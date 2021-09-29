@@ -100,14 +100,12 @@
   .container{
     height: $height;
     display: flex;
-    max-width: 1400px;
+    max-width: $global__max__width;
     margin: auto;
     .logo__container, nav{
       width: 50%;
     }
     .logo__container{
-      display: flex;
-      justify-content: center;
       .logo{
         padding: 30px;
         width: $height;
