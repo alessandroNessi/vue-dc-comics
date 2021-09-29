@@ -7,20 +7,85 @@
     </div>
     <nav>
       <ul class="options">
-        <li class="option"><a href="">CIPPA</a></li>
-        <li class="option">CIPPA</li>
-        <li class="option">LIPPA12345646</li>
-        <li class="option">CIPPA</li>
-        <li class="option">CIPPA</li>
+        <!-- @click="selectOption(index)"  -->
+        <li v-for="(option, index) in options" :key="index" class="option"><a @click="option.selected=true" :class="{selected: option.selected}" :href="option.url">{{option.text}}</a></li>
       </ul>
     </nav>
   </div>
 </template>
 
 <script>
-export default {
-  name: "Header",
-};
+  export default {
+    name: "Header",
+    // methods(){
+    //   return{
+    //     selectOption(index){
+    //       if(optionSelected!=false){
+    //         options[optionSelected].selected=false;
+    //       }
+    //       optionSelected=index;
+    //       options[optionSelected].selected=true;
+    //     },
+    //   }
+    // },
+    data(){
+      return {
+        // optionSelected: false,
+        options: [
+          {
+            text: "CHARACTERS",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "COMICS",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "MOVIES",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "TV",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "GAMES",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "COLLECTIBLES",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "VIDEOS",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "FANS",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "NEWS",
+            url: "#",
+            selected: false
+          },
+          {
+            text: "SHOP",
+            url: "#",
+            selected: false
+          },
+        ]
+      }
+    }
+  };
 </script>
 
 <style scoped lang="scss">
@@ -28,7 +93,7 @@ export default {
   @import "../assets/style/common.scss";
   $height: 150px;
   .selected{
-    border-bottom: 5px solid $main__blue;
+    box-shadow: inset  0 -5px 0px 0px $main__blue;
     color: $main__blue!important;
   }
   .container{

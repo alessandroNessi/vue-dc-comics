@@ -1,5 +1,5 @@
 <template>
-  <h1>footer</h1>
+  <div class="container">FOOTER GOES HERE</div>
 </template>
 
 <script>
@@ -13,5 +13,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../assets/style/common.scss";
+  .container{
+    padding: 50px;
+    color: white;
+    background-color: $main__gray;
+  }
 
 </style>

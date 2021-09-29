@@ -1,5 +1,5 @@
 <template>
-  <h1>main</h1>
+  <h1>-->Content goes here </h1>
 </template>
 
 <script>
@@ -13,5 +13,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+  @import "../assets/style/common.scss";
+  h1{
+    padding: 50px 300px;
+    background-color: $main__gray;
+    color: white;
+  }
 </style>
