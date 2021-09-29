@@ -8,7 +8,8 @@
     <nav>
       <ul class="options">
         <!-- @click="selectOption(index)"  -->
-        <li v-for="(option, index) in options" :key="index" class="option"><a @click="option.selected=true" :class="{selected: option.selected}" :href="option.url">{{option.text}}</a></li>
+        <!-- @click="option.selected? option.selected=false: option.selected=true" -->
+        <li v-for="(option, index) in options" :key="index" class="option"><a @click="optionSelected===false ? option.selected=true : options[optionSelected].selected=false; optionSelected=index; option.selected=true" :class="{selected: option.selected}" :href="option.url">{{option.text}}</a></li>
       </ul>
     </nav>
   </div>
@@ -30,7 +31,7 @@
     // },
     data(){
       return {
-        // optionSelected: false,
+        optionSelected: false,
         options: [
           {
             text: "CHARACTERS",
@@ -99,6 +100,8 @@
   .container{
     height: $height;
     display: flex;
+    max-width: 1400px;
+    margin: auto;
     .logo__container, nav{
       width: 50%;
     }
@@ -117,6 +120,7 @@
       .options{
         height: 100%;
         display: flex;
+        justify-content: space-between;
         .option{
           a{
             font-weight: 700;
@@ -125,7 +129,6 @@
           color:$main__gray;
           height: 100%;
           line-height: $height;
-          margin-right: 50px;
         }
       }
     }
