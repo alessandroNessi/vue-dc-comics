@@ -83,7 +83,7 @@ export default {
       align-items: center;
       color: white;
       .logo {
-        margin-right: .625rem;
+        margin-right: 0.625rem;
         height: 3.125rem;
       }
     }

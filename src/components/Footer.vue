@@ -2,8 +2,8 @@
   <section>
     <div class="footer__banner">
       <div class="container">
-        <div class="container__sub">
-          <div>
+        <div class="container__sub left">
+          <div class="left">
             <h3>{{ dccomics.title }}</h3>
             <ul>
               <li
@@ -49,6 +49,9 @@
               </li>
             </ul>
           </div>
+        </div>
+        <div class="container__sub right">
+          <img class="container__sub--logo" src="../assets/img/dc-logo-bg.png" alt="">
         </div>
       </div>
     </div>
@@ -172,8 +175,13 @@ h3 {
   width: $global__max__width;
   height: 100%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
   &__sub {
-    div{
+    padding: 1rem;
+    position: relative;
+    div {
       margin-right: 2rem;
     }
     display: flex;
@@ -182,6 +190,11 @@ h3 {
     }
     .footer__credits {
       color: rgb(121, 121, 121);
+    }
+    &--logo{
+      position: absolute;
+      width: 600px;
+      transform: translate(-100%, -20%);
     }
   }
 }
@@ -193,7 +206,6 @@ h3 {
     background-image: url("../assets/img/footer-bg.jpg");
     height: 23.75rem;
     display: flex;
-    padding: 1rem;
   }
   &__nav {
     background-color: $main__gray;
