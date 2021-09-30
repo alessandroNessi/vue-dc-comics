@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="container">
     <div class="logo__container">
       <a href="" class="logo">
         <img src="../assets/img/dc-logo.png" alt="dc logo">
@@ -12,7 +12,7 @@
         <li v-for="(option, index) in options" :key="index" class="option"><a @click="optionSelected===false ? option.selected=true : options[optionSelected].selected=false; optionSelected=index; option.selected=true" :class="{selected: option.selected}" :href="option.url">{{option.text}}</a></li>
       </ul>
     </nav>
-  </div>
+  </section>
 </template>
 
 <script>
