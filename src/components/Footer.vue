@@ -51,12 +51,24 @@
           </div>
         </div>
         <div class="container__sub right">
-          <img class="container__sub--logo" src="../assets/img/dc-logo-bg.png" alt="">
+          <img class="container__sub--logo" src="../assets/img/dc-logo-bg.png" alt="dc logo">
         </div>
       </div>
     </div>
     <div class="footer__nav">
-      <div class="container"></div>
+      <div class="container">
+        <div class="left">
+          <a href="#"><div class="button__signUp"><h3>SIGN-UP NOW!</h3></div></a>
+        </div>
+        <div class="right">
+          <a href="#"><h2 class="social__title">FOLLOW US</h2></a>
+          <a href="#"><img src="../assets/img/footer-facebook.png" alt="facebook"></a>
+          <a href="#"><img src="../assets/img/footer-twitter.png" alt="twitter"></a>
+          <a href="#"><img src="../assets/img/footer-youtube.png" alt="youtube"></a>
+          <a href="#"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a>
+          <a href="#"><img src="../assets/img/footer-periscope.png" alt="maps"></a>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -210,6 +222,22 @@ h3 {
   &__nav {
     background-color: $main__gray;
     height: 7.5rem;
+    .container{
+      align-items: center;
+      .left a{
+        padding: 0.75rem 1rem;
+        border: 4px solid $main__blue;
+        display: block;
+      }
+      .right{
+        display: flex;
+        padding-left: 1rem;
+        color: $main__blue;
+        a{
+          margin-left: 1rem;
+        }
+      }
+    }
   }
 }
 </style>
