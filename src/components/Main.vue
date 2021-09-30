@@ -7,9 +7,7 @@
     </div>
     <div class="std__bgr">
       <div class="container">
-        <div class="product">
-
-        </div>
+        <Product/>
       </div>
     </div>
   </section>
@@ -18,11 +16,15 @@
 <script>
 export default {
   name: "Main",
+  components: {
+    Product,
+  }
 
   // props: {
   //   msg: String,
   // },
 };
+import Product from "../components/Product.vue";
 </script>
 
 <style scoped lang="scss">
@@ -31,12 +33,6 @@ export default {
     background-color: $main__gray;
     .container{
       padding: 2rem;
-      .product{
-        width: calc((100% / 6) - 1rem);
-        margin: 1rem 0.5rem;
-        height: 100px;
-        background-color: yellow;
-      }
     }
   }
   .container{
