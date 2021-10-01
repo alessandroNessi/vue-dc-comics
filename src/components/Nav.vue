@@ -5,7 +5,7 @@
         <a :href="url">
           <img
             class="logo"
-            :src="require(`@/assets/img/${element.imgSrc}`)"
+            :src="require(`../assets/img/${element.imgSrc}`)"
             :width="element.width"
             :alt="element.text"
           />

@@ -7,7 +7,7 @@
     </div>
     <div class="std__bgr">
       <div class="container">
-        <Product/>
+        <Product :key="index" v-for="(elm, index) in myJson" :data="elm" />
       </div>
     </div>
   </section>
@@ -18,13 +18,15 @@ export default {
   name: "Main",
   components: {
     Product,
+  },
+  data(){
+    return{
+      myJson: Json,
+    }
   }
-
-  // props: {
-  //   msg: String,
-  // },
 };
-import Product from "../components/Product.vue";
+import Product from "./Product.vue";
+import Json from "./dc-comics.json";
 </script>
 
 <style scoped lang="scss">
@@ -33,6 +35,8 @@ import Product from "../components/Product.vue";
     background-color: $main__gray;
     .container{
       padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
     }
   }
   .container{
